@@ -2,7 +2,7 @@
 
 [TOC]
 
-## Post: /api/v1/uploadElf/{filename}
+## Post: /api/uploadElf/{filename}
 
 ### 说明
 
@@ -28,7 +28,7 @@
 }
 ```
 
-## Get: /api/v1/start
+## Get: /api/start
 
 ### 说明
 
@@ -52,7 +52,7 @@
 }
 ```
 
-## Post: /api/v1/break
+## Post: /api/break
 
 ### 说明
 
@@ -96,7 +96,7 @@
 }
 ```
 
-## Get: /api/v1/continue
+## Get: /api/continue
 
 ### 说明
 
@@ -120,7 +120,7 @@
 }
 ```
 
-## Get: /api/v1/next
+## Get: /api/next
 
 ### 说明
 
@@ -144,7 +144,7 @@
 }
 ```
 
-## Get: /api/v1/step
+## Get: /api/step
 
 ### 说明
 
@@ -168,7 +168,7 @@
 }
 ```
 
-## Post: /api/v1/disassemble
+## Post: /api/disassemble
 
 ### 说明
 
@@ -221,7 +221,7 @@
 }
 ```
 
-## Get: /api/v1/getRip
+## Get: /api/getRip
 
 ### 说明
 
@@ -247,7 +247,7 @@
 }
 ```
 
-## Get: /api/v1/getRegisters
+## Get: /api/getRegisters
 
 ### 说明
 
