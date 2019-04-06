@@ -61,11 +61,11 @@
 
 ### 第三次开会
 
-demo展示文档：
+#### 1. demo展示文档：
 
 主要展示服务端`django`与`gdb server`之间的通信：[demoDoc.md](./demoDoc.md)
 
-需要讨论的问题：
+#### 2. 需要讨论的问题：
 
 - `gdb`端与`django`端是否要分离成两个项目？还有，项目取啥名字呢？
 
@@ -75,4 +75,36 @@ demo展示文档：
 
 - 项目`python`代码编写规范，请大师傅们指示一下。
 
-新阶段的规划：
+#### 3. 新阶段的规划：
+
+##### 问题的解决
+
+1. 后端分为`gdb`服务端: [gdbServer](https://github.com/gu-team/gdbServer) 和 `django`端: [gdbBackEnd_DJ](https://github.com/gu-team/gdbBackEnd_DJ)。
+
+2. 现阶段测试时，只开启一个`gdb`端，即同一时刻只允许一个用户访问，后期再采用开启多个`gdb`端(多进程)。
+
+3. 单个用户暂时不考虑缓存问题，后期可能用`redis`解决。
+
+4. 暂时用`tcp`实现与Django的通讯，后期再改成进程间的通讯。
+
+##### 新的分工
+
+总而言之，先将`gdb`的基本功能都实现，再考虑之后的改进。
+
+所以，现阶段(**下次开会之前**)需要分工完成[接口文档](./apiDoc.md)中的以下接口：
+
+- 接口 --- 负责人
+- `api/start` --- 李双玖
+- `api/continue` --- 李双玖
+- `api/break` --- 李双玖
+- `api/next` --- 黄宇轩
+- `api/step` --- 李双玖
+- `api/disassemble` --- 秦瑞哲
+- `api/getRip` --- 秦瑞哲
+- `api/getRegister` --- 汤茂哥
+
+接口编写需要同时完成`django`端和`gdb`端的。
+
+如何编写，以及如何测试，请参考[展示demo](./demoDoc.md)。
+
+**编写完一个接口后，到[计划卡](https://github.com/orgs/gu-team/projects/1#card-19897027)中勾选已完成的`api`**。
