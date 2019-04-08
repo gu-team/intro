@@ -26,7 +26,7 @@
 
 - 放弃`ptrace`，检测系统调用改由`gdb`中的`catch`命令来实现。
 
-- `api`接口直接返回`json`化数据，放弃使用`rest-framework`。
+|`api`接口直接返回`json`化数据，放弃使用`rest-framework`。
 
 - 需要在`gdb`中实现一个简单服务器，用于与`Django`服务器通信。总体形成 `gdb server -- django backend -- web fontend` 三位一体的架构。
 
@@ -40,9 +40,9 @@
 
 | 具体任务 | 开始时间 | 完成时间 | 负责人 | 备注 | 完成情况 |
 |---|---|---|---|---|---|
-| 接口文档 | 2019/3/12 | 2019/3/14 | 李双玖 | 大家讨论 | [api文档](./apiDoc.md)|
-| 前端 | 2019/3/12 | 2019/3/20+ | 汤茂哥+李双玖 | 只实现了简单的展示 | [gdbweb](https://github.com/gu-team/gdbweb) |
-| 后端 | 2019/3/12 | 2019/3/20+ | 秦瑞哲+黄宇轩+李双玖 | django实现api接口的demo | [djangoDemo](https://github.com/gu-team/djangoDemo) |
+| 接口文档 | 2019/3/12 | 2019/3/14 | douNine | 大家讨论 | [api文档](./apiDoc.md)|
+| 前端 | 2019/3/12 | 2019/3/20+ | TayMarine+douNine | 只实现了简单的展示 | [gdbweb](https://github.com/gu-team/gdbweb) |
+| 后端 | 2019/3/12 | 2019/3/20+ | 40m41h42t+Creedowl+douNine | django实现api接口的demo | [djangoDemo](https://github.com/gu-team/djangoDemo) |
 
 ### 第二次开会 2019/3/22
 
@@ -55,9 +55,9 @@
 
 | 具体任务 | 开始时间 | 完成时间 | 负责人 | 备注 | 完成情况 |
 |---|---|---|---|---|---|
-| 前端继续完善页面 | 2019/3/22 | 2019/3/30+ | 汤茂哥+李双玖 | | [gdbweb](https://github.com/gu-team/gdbweb) |
-| 后端开始实现部分接口 | 2019/3/22 | 2019/3/30+ | 秦瑞哲+黄宇轩+李双玖 | 已实现两个简单接口，直接通过`json`化返回，不使用`restful`框架 | [djangoDemo](https://github.com/gu-team/djangoDemo)中的`api`应用 |
-| ptrace单步执行的demo | 2019/3/22 | 2019/3/30+ | 秦瑞哲+李双玖 | 放弃改用`gdb`的`catch`监视系统调用 | |
+| 前端继续完善页面 | 2019/3/22 | 2019/3/30+ | TayMarine+douNine | | [gdbweb](https://github.com/gu-team/gdbweb) |
+| 后端开始实现部分接口 | 2019/3/22 | 2019/3/30+ | 40m41h42t+Creedowl+douNine | 已实现两个简单接口，直接通过`json`化返回，不使用`restful`框架 | [djangoDemo](https://github.com/gu-team/djangoDemo)中的`api`应用 |
+| ptrace单步执行的demo | 2019/3/22 | 2019/3/30+ | 40m41h42t+douNine | 放弃改用`gdb`的`catch`监视系统调用 | |
 
 ### 第三次开会
 
@@ -93,15 +93,16 @@
 
 所以，现阶段(**下次开会之前**)需要分工完成[接口文档](./apiDoc.md)中的以下接口：
 
-- 接口 --- 负责人
-- `api/start` --- 李双玖
-- `api/continue` --- 李双玖
-- `api/break` --- 李双玖
-- `api/next` --- 黄宇轩
-- `api/step` --- 李双玖
-- `api/disassemble` --- 秦瑞哲
-- `api/getRip` --- 秦瑞哲
-- `api/getRegister` --- 汤茂哥
+|接口|负责人|
+|---|---|
+|`api/start`|douNine|
+|`api/continue`|douNine|
+|`api/break`|douNine|
+|`api/next`|Creedowl|
+|`api/step`|douNine|
+|`api/disassemble`|40m41h42t|
+|`api/getRip`|40m41h42t|
+|`api/getRegister`|TayMarine|
 
 接口编写需要同时完成`django`端和`gdb`端的。
 
