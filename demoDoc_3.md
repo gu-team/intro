@@ -103,11 +103,7 @@ def start(request):
 
 ![demoPic/QQ截图20190404233200.png](demoPic/QQ截图20190404233200.png)
 
-启动Django：
-
-![demoPic/QQ截图20190404233348.png](demoPic/QQ截图20190404233348.png)
-
-访问api：
+启动Django，访问api：
 
 ![QQ截图20190404233542.png](demoPic/QQ截图20190404233542.png)
 
